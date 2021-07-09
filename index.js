@@ -2,7 +2,7 @@
 // myLeads -> should be assigned to an empty array
 // inputEl -> should be assigned to the text input field
 
-let myLeads= ["www.shannasosweet.com", "www.shannasosour.com", "www.shannasobitter.com"]
+let myLeads= []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
@@ -11,20 +11,26 @@ const ulEl = document.getElementById("ul-el")
 // let inputBtn = document.getElementById("input-btn")
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
-    console.log(myLeads)
+    // to clear out the input field...
+    inputEl.value = " "
+
+    renderLeads()
 })
 
-for(let i=0; i < myLeads.length; i++){
-    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+function renderLeads() {
+    listItems = ""
+    for(let i=0; i < myLeads.length; i++){
+    // listItems += "<li><a href='" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
 
-
-    //*** Another method***
-    // create element
-    // // set text content
-    // // append to ul
-    // const li = document.createElement("li")
-    // li.textContent = myLeads[i]
-    // ulEl.append(li)
-
+    listItems += `
+        <li>
+            <a target= "_blank" href='$myLeads[i]'>
+                $ myLeads[i]
+            </a>
+        </li>
+        `
+    }
+    ulEl.innerHTML = listItems
 }
+
 
