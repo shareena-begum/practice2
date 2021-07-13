@@ -18,8 +18,13 @@ button{
     background-color: greenyellow;
     color: rgb(19, 18, 18);
     padding: 10px 20px; 
-    border: none;
+    border: 1px solid greenyellow;
     font-weight: bold;
+}
+
+#delete-btn {
+    background-color: black;
+    color: greenyellow;
 }
 
 ul {
