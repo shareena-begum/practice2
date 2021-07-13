@@ -8,22 +8,14 @@ myLeads = JSON.parse(myLeads)
 
 myLeads.push("www.shannabitter.com")
 
-console.log(myLeads)
+myLeads = JSON.stringify(myLeads)
+
+console.log(typeof myLeads)
 
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
-//  console.log (localStorage.getItem("myLeads"))
-
-// localStorage.setItem("myName", "Shareena Begum")
-
-let name = localStorage.getItem("myName")
-console.log(name)
-
-// localStorage.clear()
-
-// let inputBtn = document.getElementById("input-btn")
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     // to clear out the input field...
